@@ -1,0 +1,11 @@
+{
+  "name": "class-02",
+  "version": "1.0.0",
+  "description": "namaste react",
+  "main": "html",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}
