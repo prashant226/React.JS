@@ -2,7 +2,7 @@
     "name": "class-02",
     "version": "1.0.0",
     "description": "namaste react",
-    "main": "index.js",
+
     "scripts": {
         "test": "jest"
     },
