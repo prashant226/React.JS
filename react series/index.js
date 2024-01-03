@@ -11,7 +11,8 @@ import ReactDOM from "react-dom/client";
  * compatable with older version of the browser
  * HTTPS on dev 
  * port number
- * 
+ * consistent hashing algorithm
+ * zero config
  */
 
 const heading = React.createElement(
