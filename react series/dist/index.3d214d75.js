@@ -2945,7 +2945,9 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _client = require("react-dom/client"); /**
+var _client = require("react-dom/client");
+var _clientDefault = parcelHelpers.interopDefault(_client);
+/**
  * PARCEL FEATURES:
  * BUILDING
  * MINIFY
@@ -2958,28 +2960,46 @@ var _client = require("react-dom/client"); /**
  * port number
  * consistent hashing algorithm
  * zero config
- */  // const heading = React.createElement(
- //     "h1", {
- //         id: "title",
- //     },
- //     "Namaste Everyone"
- // );
- // const heading2 = React.createElement(
- //     "h2", {
- //         id: "title",
- //     },
- //     "Heading 2"
- // );
- // const container = React.createElement(
- //     "div", {
- //         id: "container",
- //     }, [heading, heading2]
- // );
- // console.log(heading);
- // const root = ReactDOM.createRoot(document.getElementById("root"));
- // //passing react element inside a root
- // root.render(container);
-var _clientDefault = parcelHelpers.interopDefault(_client);
+ */ // const heading = React.createElement(
+//     "h1", {
+//         id: "title",
+//     },
+//     "Namaste Everyone"
+// );
+// const heading2 = React.createElement(
+//     "h2", {
+//         id: "title",
+//     },
+//     "Heading 2"
+// );
+// const container = React.createElement(
+//     "div", {
+//         id: "container",
+//     }, [heading, heading2]
+// );
+// console.log(heading);
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// //passing react element inside a root
+// root.render(container);
+const parent = /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
+    id: "parent"
+}, [
+    /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
+        id: "child"
+    }, [
+        /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {}, "I'm an h1 tag"),
+        /*#__PURE__*/ (0, _reactDefault.default).createElement("h2", {}, "i'm an h2 tag")
+    ]),
+    /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
+        id: "child2"
+    }, [
+        /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {}, "I'm an h1 tag"),
+        /*#__PURE__*/ (0, _reactDefault.default).createElement("h2", {}, "I'm an h2 tag")
+    ])
+]);
+//JSX
+const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
+root.render(parent);
 
   $parcel$ReactRefreshHelpers$e4e3.postlude(module);
 } finally {
