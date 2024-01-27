@@ -13,5 +13,7 @@ const parent = React.createElement("div", { id: "parent" }, [
 
 ]);
 
+
+//JSX
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
+root.render(parent);

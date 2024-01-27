@@ -1,0 +1,17 @@
+{
+  "name": "restart.react",
+  "version": "1.0.0",
+  "description": "this is namste react by akshay saini",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "saini",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  }
+}
