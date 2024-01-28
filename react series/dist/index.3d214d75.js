@@ -2965,42 +2965,53 @@ var _clientDefault = parcelHelpers.interopDefault(_client);
 //Below is core react way to create an react element
 // const heading = React.createElement("h1", { id: "heading" }, "Namste series");
 //JSX React(JSX Code is transpiled before going to the JS Engine)
-const heading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-    className: "head",
-    children: " Namaste React using JSX "
-}, void 0, false, {
-    fileName: "index.js",
-    lineNumber: 24,
-    columnNumber: 17
-}, undefined);
+const title = ()=>{
+    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        className: "head",
+        children: " Namaste React using JSX "
+    }, void 0, false, {
+        fileName: "index.js",
+        lineNumber: 25,
+        columnNumber: 3
+    }, undefined);
+};
+_c = title;
 //REACT Functional Component
 const HeadingComponent = ()=>{
     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         id: "container",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            className: "heading",
-            children: " Functional Component "
-        }, void 0, false, {
-            fileName: "index.js",
-            lineNumber: 29,
-            columnNumber: 5
-        }, undefined)
-    }, void 0, false, {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("title", {}, void 0, false, {
+                fileName: "index.js",
+                lineNumber: 31,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "heading",
+                children: " Functional Component "
+            }, void 0, false, {
+                fileName: "index.js",
+                lineNumber: 32,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "index.js",
-        lineNumber: 28,
+        lineNumber: 30,
         columnNumber: 3
     }, undefined);
 };
-_c = HeadingComponent;
+_c1 = HeadingComponent;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 // root.render(heading);
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeadingComponent, {}, void 0, false, {
     fileName: "index.js",
-    lineNumber: 36,
+    lineNumber: 39,
     columnNumber: 13
 }, undefined));
-var _c;
-$RefreshReg$(_c, "HeadingComponent");
+var _c, _c1;
+$RefreshReg$(_c, "title");
+$RefreshReg$(_c1, "HeadingComponent");
 
   $parcel$ReactRefreshHelpers$e4e3.postlude(module);
 } finally {

@@ -21,11 +21,14 @@ import ReactDOM from "react-dom/client";
 
 //JSX React(JSX Code is transpiled before going to the JS Engine)
 
-const heading = <h1 className="head"> Namaste React using JSX </h1>;
+const title = () => {
+  <h1 className="head"> Namaste React using JSX </h1>;
+};
 
 //REACT Functional Component
 const HeadingComponent = () => {
   <div id="container">
+    <title />
     <h1 className="heading"> Functional Component </h1>
   </div>;
 };
