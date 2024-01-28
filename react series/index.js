@@ -9,12 +9,11 @@ import ReactDOM from "react-dom/client";
  * SUPER-FAST TIME SHORT
  * caching while devlopment
  * compatable with older version of the browser
- * HTTPS on dev 
+ * HTTPS on dev
  * port number
  * consistent hashing algorithm
  * zero config
  */
-
 
 //React element => it is an Object
 //Below is core react way to create an react element
@@ -22,7 +21,16 @@ import ReactDOM from "react-dom/client";
 
 //JSX React(JSX Code is transpiled before going to the JS Engine)
 
-const jsxHeading = ( < h1 id = "heading"
-        className = "head" > Namaste React using JSX < /h1>);
+const heading = <h1 className="head"> Namaste React using JSX </h1>;
 
-        const root = ReactDOM.createRoot(document.getElementById("root")); root.render(jsxHeading);
+//REACT Functional Component
+const HeadingComponent = () => {
+  <div id="container">
+    <h1 className="heading"> Functional Component </h1>
+  </div>;
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// root.render(heading);
+root.render(<HeadingComponent />);

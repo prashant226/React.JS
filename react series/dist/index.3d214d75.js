@@ -2957,7 +2957,7 @@ var _clientDefault = parcelHelpers.interopDefault(_client);
  * SUPER-FAST TIME SHORT
  * caching while devlopment
  * compatable with older version of the browser
- * HTTPS on dev 
+ * HTTPS on dev
  * port number
  * consistent hashing algorithm
  * zero config
@@ -2965,17 +2965,42 @@ var _clientDefault = parcelHelpers.interopDefault(_client);
 //Below is core react way to create an react element
 // const heading = React.createElement("h1", { id: "heading" }, "Namste series");
 //JSX React(JSX Code is transpiled before going to the JS Engine)
-const jsxHeading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-    id: "heading",
+const heading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
     className: "head",
     children: " Namaste React using JSX "
 }, void 0, false, {
     fileName: "index.js",
-    lineNumber: 25,
-    columnNumber: 22
+    lineNumber: 24,
+    columnNumber: 17
 }, undefined);
+//REACT Functional Component
+const HeadingComponent = ()=>{
+    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        id: "container",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+            className: "heading",
+            children: " Functional Component "
+        }, void 0, false, {
+            fileName: "index.js",
+            lineNumber: 29,
+            columnNumber: 5
+        }, undefined)
+    }, void 0, false, {
+        fileName: "index.js",
+        lineNumber: 28,
+        columnNumber: 3
+    }, undefined);
+};
+_c = HeadingComponent;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-root.render(jsxHeading);
+// root.render(heading);
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeadingComponent, {}, void 0, false, {
+    fileName: "index.js",
+    lineNumber: 36,
+    columnNumber: 13
+}, undefined));
+var _c;
+$RefreshReg$(_c, "HeadingComponent");
 
   $parcel$ReactRefreshHelpers$e4e3.postlude(module);
 } finally {
