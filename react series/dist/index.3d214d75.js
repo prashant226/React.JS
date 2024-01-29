@@ -2965,57 +2965,124 @@ var _clientDefault = parcelHelpers.interopDefault(_client);
 //Below is core react way to create an react element
 // const heading = React.createElement("h1", { id: "heading" }, "Namste series");
 //JSX React(JSX Code is transpiled before going to the JS Engine)
-const elem = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-    children: "React Element"
-}, void 0, false, {
-    fileName: "index.js",
-    lineNumber: 24,
-    columnNumber: 14
-}, undefined);
-const title = ()=>{
-    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        className: "head",
-        children: "Namaste React using JSX"
-    }, void 0, false, {
-        fileName: "index.js",
-        lineNumber: 27,
-        columnNumber: 3
-    }, undefined);
-};
-const data = api.getData();
-const number = 1000;
-//REACT Functional Component
-const HeadingComponent = ()=>{
-    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        id: "container",
+// const elem = <span>React Element</span>;
+// const title = () => {
+//   <h1 className="head">Namaste React using JSX</h1>;
+// };
+// const data = api.getData();
+// const number = 1000;
+// //REACT Functional Component
+// const HeadingComponent = () => {
+//   <div id="container">
+//     {
+//       // you can write any JS inside it.
+//       data
+//     }
+//     <h1 className="heading"> Functional Component </h1>
+//   </div>;
+// };
+/**
+ * how our APP would look like::
+ * Header
+ * -Logo
+ * -Nav iteams
+ * Body
+ * -search bar
+ * -Restaurant Container
+ * -restaurants cards
+ * Footer
+ * -links
+ * -address
+ */ const Header = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "header",
         children: [
-            // you can write any JS inside it.
-            number,
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "heading",
-                children: " Functional Component "
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "logo-container",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    className: "logo",
+                    src: "food logo.jpg"
+                }, void 0, false, {
+                    fileName: "index.js",
+                    lineNumber: 62,
+                    columnNumber: 9
+                }, undefined)
             }, void 0, false, {
                 fileName: "index.js",
-                lineNumber: 39,
-                columnNumber: 5
+                lineNumber: 61,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "nav-items",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Name"
+                        }, void 0, false, {
+                            fileName: "index.js",
+                            lineNumber: 66,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "About Us"
+                        }, void 0, false, {
+                            fileName: "index.js",
+                            lineNumber: 67,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Contact Us"
+                        }, void 0, false, {
+                            fileName: "index.js",
+                            lineNumber: 68,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Cart"
+                        }, void 0, false, {
+                            fileName: "index.js",
+                            lineNumber: 69,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "index.js",
+                    lineNumber: 65,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "index.js",
+                lineNumber: 64,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "index.js",
-        lineNumber: 34,
-        columnNumber: 3
+        lineNumber: 60,
+        columnNumber: 5
     }, undefined);
 };
-_c = HeadingComponent;
+_c = Header;
+const AppLayout = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "app"
+    }, void 0, false, {
+        fileName: "index.js",
+        lineNumber: 77,
+        columnNumber: 10
+    }, undefined);
+};
+_c1 = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 // root.render(heading);
-root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeadingComponent, {}, void 0, false, {
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "index.js",
-    lineNumber: 46,
+    lineNumber: 83,
     columnNumber: 13
 }, undefined));
-var _c;
-$RefreshReg$(_c, "HeadingComponent");
+var _c, _c1;
+$RefreshReg$(_c, "Header");
+$RefreshReg$(_c1, "AppLayout");
 
   $parcel$ReactRefreshHelpers$e4e3.postlude(module);
 } finally {
