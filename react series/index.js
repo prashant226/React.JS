@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import logoImage from "./OIP.jpg";
 /**
  * PARCEL FEATURES:
  * BUILDING
@@ -49,7 +50,9 @@ import ReactDOM from "react-dom/client";
  * Body
  * -search bar
  * -Restaurant Container
- * -restaurants cards
+ * -restaurants cards(
+ * -name of restaurant , star rating , cuisines , etc..
+ * )
  * Footer
  * -links
  * -address
@@ -59,7 +62,10 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo-container">
-        <img className="logo" src="food logo.jpg" />
+        {
+          /* <img className="logo" src="logoImage" /> */
+          <img className="logo" src={require("./OIP.jpg")} alt="Logo" />
+        }
       </div>
       <div className="nav-items">
         <ul>
@@ -72,9 +78,40 @@ const Header = () => {
     </div>
   );
 };
+const styleCard = () => {
+  backgroundColur: "af0f0f8";
+};
+
+const RestaurantCard = () => {
+  return (
+    <div className="res-card" style={styleCard}>
+      <img
+        src="https://th.bing.com/th/id/OIP.VKWiZKdds9rHzCBWgP9OIwHaIw?w=152&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        alt="res-logo"
+      />
+      <h3>Meghana Foods</h3>
+    </div>
+  );
+};
+
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="search">Search</div>
+      <div className="res-container">
+        <RestaurantCard />
+      </div>
+    </div>
+  );
+};
 
 const AppLayout = () => {
-  return <div className="app"></div>;
+  return (
+    <div className="app">
+      <Header />
+      <Body />
+    </div>
+  );
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
