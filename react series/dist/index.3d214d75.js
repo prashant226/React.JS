@@ -3003,14 +3003,14 @@ var _oipJpgDefault = parcelHelpers.interopDefault(_oipJpg);
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "logo-container",
-                children: /* <img className="logo" src="logoImage" /> */ /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                     className: "logo",
                     src: require("b51c5de090fc8881"),
                     alt: "Logo"
                 }, void 0, false, {
                     fileName: "index.js",
-                    lineNumber: 67,
-                    columnNumber: 11
+                    lineNumber: 65,
+                    columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "index.js",
@@ -3025,39 +3025,39 @@ var _oipJpgDefault = parcelHelpers.interopDefault(_oipJpg);
                             children: "Name"
                         }, void 0, false, {
                             fileName: "index.js",
-                            lineNumber: 72,
+                            lineNumber: 69,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "About Us"
                         }, void 0, false, {
                             fileName: "index.js",
-                            lineNumber: 73,
+                            lineNumber: 70,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Contact Us"
                         }, void 0, false, {
                             fileName: "index.js",
-                            lineNumber: 74,
+                            lineNumber: 71,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Cart"
                         }, void 0, false, {
                             fileName: "index.js",
-                            lineNumber: 75,
+                            lineNumber: 72,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "index.js",
-                    lineNumber: 71,
+                    lineNumber: 68,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "index.js",
-                lineNumber: 70,
+                lineNumber: 67,
                 columnNumber: 7
             }, undefined)
         ]
@@ -3068,54 +3068,58 @@ var _oipJpgDefault = parcelHelpers.interopDefault(_oipJpg);
     }, undefined);
 };
 _c = Header;
-const styleCard = ()=>{
-    backgroundColur: "af0f0f8";
+const styleCard = {
+    backgroundColor: "#af0f0f8"
 };
-const RestaurantCard = ()=>{
+const RestaurantCard = (props)=>{
+    console.log(props);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "res-card",
         style: styleCard,
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 src: "https://th.bing.com/th/id/OIP.VKWiZKdds9rHzCBWgP9OIwHaIw?w=152&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-                alt: "res-logo"
+                alt: "res-logo",
+                onError: (e)=>{
+                    e.target.style.display = "none"; // Hide image if loading fails
+                }
             }, void 0, false, {
                 fileName: "index.js",
-                lineNumber: 88,
+                lineNumber: 87,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: "Meghana Foods"
-            }, void 0, false, {
-                fileName: "index.js",
-                lineNumber: 92,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: "Biryani , North Indian ,Asian"
-            }, void 0, false, {
-                fileName: "index.js",
-                lineNumber: 93,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: "4.4 stars"
+                children: props.resName
             }, void 0, false, {
                 fileName: "index.js",
                 lineNumber: 94,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: "38 minutes ETA"
+                children: props.cuisine
             }, void 0, false, {
                 fileName: "index.js",
                 lineNumber: 95,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: "4.4 stars"
+            }, void 0, false, {
+                fileName: "index.js",
+                lineNumber: 96,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: "38 minutes ETA"
+            }, void 0, false, {
+                fileName: "index.js",
+                lineNumber: 97,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "index.js",
-        lineNumber: 87,
+        lineNumber: 86,
         columnNumber: 5
     }, undefined);
 };
@@ -3129,25 +3133,38 @@ const Body = ()=>{
                 children: "Search"
             }, void 0, false, {
                 fileName: "index.js",
-                lineNumber: 103,
+                lineNumber: 105,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "res-container",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {}, void 0, false, {
-                    fileName: "index.js",
-                    lineNumber: 105,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
+                        resName: "Meghana-foods",
+                        cuisine: "Biryani , North Indian , Asian"
+                    }, void 0, false, {
+                        fileName: "index.js",
+                        lineNumber: 107,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
+                        resName: "KFC",
+                        cuisine: "Burger , Fast Food"
+                    }, void 0, false, {
+                        fileName: "index.js",
+                        lineNumber: 111,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
                 fileName: "index.js",
-                lineNumber: 104,
+                lineNumber: 106,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "index.js",
-        lineNumber: 102,
+        lineNumber: 104,
         columnNumber: 5
     }, undefined);
 };
@@ -3158,27 +3175,26 @@ const AppLayout = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
                 fileName: "index.js",
-                lineNumber: 114,
+                lineNumber: 120,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
                 fileName: "index.js",
-                lineNumber: 115,
+                lineNumber: 121,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "index.js",
-        lineNumber: 113,
+        lineNumber: 119,
         columnNumber: 5
     }, undefined);
 };
 _c3 = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-// root.render(heading);
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "index.js",
-    lineNumber: 123,
+    lineNumber: 127,
     columnNumber: 13
 }, undefined));
 var _c, _c1, _c2, _c3;
