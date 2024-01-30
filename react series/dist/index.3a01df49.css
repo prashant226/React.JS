@@ -40,4 +40,9 @@
   padding: 5px;
 }
 
+.res-card:hover {
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
 /*# sourceMappingURL=index.3a01df49.css.map */

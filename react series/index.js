@@ -90,6 +90,9 @@ const RestaurantCard = () => {
         alt="res-logo"
       />
       <h3>Meghana Foods</h3>
+      <h4>Biryani , North Indian ,Asian</h4>
+      <h4>4.4 stars</h4>
+      <h4>38 minutes ETA</h4>
     </div>
   );
 };
