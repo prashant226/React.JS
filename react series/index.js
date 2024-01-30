@@ -62,10 +62,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo-container">
-        {
-          /* <img className="logo" src="logoImage" /> */
-          <img className="logo" src={require("./OIP.jpg")} alt="Logo" />
-        }
+        <img className="logo" src={require("./OIP.jpg")} alt="Logo" />
       </div>
       <div className="nav-items">
         <ul>
@@ -78,19 +75,24 @@ const Header = () => {
     </div>
   );
 };
-const styleCard = () => {
-  backgroundColur: "af0f0f8";
+
+const styleCard = {
+  backgroundColor: "#af0f0f8",
 };
 
-const RestaurantCard = () => {
+const RestaurantCard = (props) => {
+  console.log(props);
   return (
     <div className="res-card" style={styleCard}>
       <img
         src="https://th.bing.com/th/id/OIP.VKWiZKdds9rHzCBWgP9OIwHaIw?w=152&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
         alt="res-logo"
+        onError={(e) => {
+          e.target.style.display = "none"; // Hide image if loading fails
+        }}
       />
-      <h3>Meghana Foods</h3>
-      <h4>Biryani , North Indian ,Asian</h4>
+      <h3>{props.resName}</h3>
+      <h4>{props.cuisine}</h4>
       <h4>4.4 stars</h4>
       <h4>38 minutes ETA</h4>
     </div>
@@ -102,7 +104,11 @@ const Body = () => {
     <div className="body">
       <div className="search">Search</div>
       <div className="res-container">
-        <RestaurantCard />
+        <RestaurantCard
+          resName="Meghana-foods"
+          cuisine="Biryani , North Indian , Asian"
+        />
+        <RestaurantCard resName="KFC" cuisine="Burger , Fast Food" />
       </div>
     </div>
   );
@@ -118,6 +124,4 @@ const AppLayout = () => {
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-// root.render(heading);
 root.render(<AppLayout />);
