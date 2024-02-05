@@ -27598,6 +27598,36 @@ var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
 var _mockData = require("../common/mockData");
 var _mockDataDefault = parcelHelpers.interopDefault(_mockData);
 const Body = ()=>{
+    let listOfRest = [
+        {
+            data: {
+                id: "74453",
+                name: "Domino's Pizza",
+                cloudinaryImageId: "bz9zkh2aqywjhpankb07",
+                cuisines: [
+                    "Pizzas"
+                ],
+                tags: [],
+                costForTwo: 40000,
+                deliveryTime: 45,
+                avgRating: "4.5"
+            }
+        },
+        {
+            data: {
+                id: "74493",
+                name: "KFC",
+                cloudinaryImageId: "bz9zkh2aqywjhpankb07",
+                cuisines: [
+                    "Pizzas"
+                ],
+                tags: [],
+                costForTwo: 40000,
+                deliveryTime: 45,
+                avgRating: "3.5"
+            }
+        }
+    ];
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "restaurant-list",
         children: [
@@ -27606,32 +27636,34 @@ const Body = ()=>{
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                     className: "filter-btn",
                     onClick: ()=>{
-                        console.log("Button-Clicked");
+                        // console.log("Button-Clicked");
+                        //FILTER LOGIC HERE::
+                        listOfRest = listOfRest.filter((res)=>res.data.avgRating > 4);
                     },
                     children: "Top Rated Restaurants"
                 }, void 0, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 8,
+                    lineNumber: 39,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 7,
+                lineNumber: 38,
                 columnNumber: 7
             }, undefined),
-            (0, _mockDataDefault.default).map((restaurant)=>{
+            listOfRest.map((restaurant)=>{
                 return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
                     ...restaurant.data
                 }, restaurant.data.id, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 19,
+                    lineNumber: 52,
                     columnNumber: 16
                 }, undefined);
             })
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 6,
+        lineNumber: 37,
         columnNumber: 5
     }, undefined);
 };
