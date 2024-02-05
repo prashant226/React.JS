@@ -27597,7 +27597,9 @@ var _restaurantCard = require("./RestaurantCard");
 var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
 var _mockData = require("../common/mockData");
 var _mockDataDefault = parcelHelpers.interopDefault(_mockData);
+//STATE VARIABLES WHICH ARE REALLY POWERFULL::
 const Body = ()=>{
+    //NORMAL JS VARIABLE
     let listOfRest = [
         {
             data: {
@@ -27643,12 +27645,12 @@ const Body = ()=>{
                     children: "Top Rated Restaurants"
                 }, void 0, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 39,
+                    lineNumber: 42,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 38,
+                lineNumber: 41,
                 columnNumber: 7
             }, undefined),
             listOfRest.map((restaurant)=>{
@@ -27656,14 +27658,14 @@ const Body = ()=>{
                     ...restaurant.data
                 }, restaurant.data.id, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 52,
+                    lineNumber: 55,
                     columnNumber: 16
                 }, undefined);
             })
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 37,
+        lineNumber: 40,
         columnNumber: 5
     }, undefined);
 };

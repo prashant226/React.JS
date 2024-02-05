@@ -1,7 +1,10 @@
 import RestaurantCard from "./RestaurantCard";
 import restaurantList from "../common/mockData";
 
+//STATE VARIABLES WHICH ARE REALLY POWERFULL::
+
 const Body = () => {
+  //NORMAL JS VARIABLE
   let listOfRest = [
     {
       data: {
