@@ -1,40 +1,43 @@
 import RestaurantCard from "./RestaurantCard";
 import restaurantList from "../common/mockData";
-
-//STATE VARIABLES WHICH ARE REALLY POWERFULL::
+import { useState } from "react";
 
 const Body = () => {
-  //NORMAL JS VARIABLE
-  let listOfRest = [
-    {
-      data: {
-        id: "74453",
-        name: "Domino's Pizza",
+  //STATE VARIOWERFULL::ABLES WHICH ARE REALLY Powerfull::
+  const [listOfRest, setRes] = useState(restaurantList);
 
-        cloudinaryImageId: "bz9zkh2aqywjhpankb07",
-        cuisines: ["Pizzas"],
-        tags: [],
-        costForTwo: 40000,
+  //NORMAL JS VARIABLE::
+  //   let listOfRest = [];
+  //   let listOfRestJS = [
+  //     {
+  //       data: {
+  //         id: "74453",
+  //         name: "Domino's Pizza",
 
-        deliveryTime: 45,
-        avgRating: "4.5",
-      },
-    },
-    {
-      data: {
-        id: "74493",
-        name: "KFC",
+  //         cloudinaryImageId: "bz9zkh2aqywjhpankb07",
+  //         cuisines: ["Pizzas"],
+  //         tags: [],
+  //         costForTwo: 40000,
 
-        cloudinaryImageId: "bz9zkh2aqywjhpankb07",
-        cuisines: ["Pizzas"],
-        tags: [],
-        costForTwo: 40000,
+  //         deliveryTime: 45,
+  //         avgRating: "4.5",
+  //       },
+  //     },
+  //     {
+  //       data: {
+  //         id: "74493",
+  //         name: "KFC",
 
-        deliveryTime: 45,
-        avgRating: "3.5",
-      },
-    },
-  ];
+  //         cloudinaryImageId: "bz9zkh2aqywjhpankb07",
+  //         cuisines: ["Pizzas"],
+  //         tags: [],
+  //         costForTwo: 40000,
+
+  //         deliveryTime: 45,
+  //         avgRating: "3.5",
+  //       },
+  //     },
+  //   ];
 
   return (
     <div className="restaurant-list">
@@ -42,9 +45,10 @@ const Body = () => {
         <button
           className="filter-btn"
           onClick={() => {
-            // console.log("Button-Clicked");
-            //FILTER LOGIC HERE::
-            listOfRest = listOfRest.filter((res) => res.data.avgRating > 4);
+            const filteredList = listOfRest.filter(
+              (res) => res.data.avgRating > 4
+            );
+            setRes(filteredList);
           }}
         >
           Top Rated Restaurants

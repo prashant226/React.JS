@@ -27597,39 +27597,40 @@ var _restaurantCard = require("./RestaurantCard");
 var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
 var _mockData = require("../common/mockData");
 var _mockDataDefault = parcelHelpers.interopDefault(_mockData);
-//STATE VARIABLES WHICH ARE REALLY POWERFULL::
+var _react = require("react");
+var _s = $RefreshSig$();
 const Body = ()=>{
-    //NORMAL JS VARIABLE
-    let listOfRest = [
-        {
-            data: {
-                id: "74453",
-                name: "Domino's Pizza",
-                cloudinaryImageId: "bz9zkh2aqywjhpankb07",
-                cuisines: [
-                    "Pizzas"
-                ],
-                tags: [],
-                costForTwo: 40000,
-                deliveryTime: 45,
-                avgRating: "4.5"
-            }
-        },
-        {
-            data: {
-                id: "74493",
-                name: "KFC",
-                cloudinaryImageId: "bz9zkh2aqywjhpankb07",
-                cuisines: [
-                    "Pizzas"
-                ],
-                tags: [],
-                costForTwo: 40000,
-                deliveryTime: 45,
-                avgRating: "3.5"
-            }
-        }
-    ];
+    _s();
+    //STATE VARIOWERFULL::ABLES WHICH ARE REALLY Powerfull::
+    const [listOfRest, setRes] = (0, _react.useState)((0, _mockDataDefault.default));
+    //NORMAL JS VARIABLE::
+    //   let listOfRest = [];
+    //   let listOfRestJS = [
+    //     {
+    //       data: {
+    //         id: "74453",
+    //         name: "Domino's Pizza",
+    //         cloudinaryImageId: "bz9zkh2aqywjhpankb07",
+    //         cuisines: ["Pizzas"],
+    //         tags: [],
+    //         costForTwo: 40000,
+    //         deliveryTime: 45,
+    //         avgRating: "4.5",
+    //       },
+    //     },
+    //     {
+    //       data: {
+    //         id: "74493",
+    //         name: "KFC",
+    //         cloudinaryImageId: "bz9zkh2aqywjhpankb07",
+    //         cuisines: ["Pizzas"],
+    //         tags: [],
+    //         costForTwo: 40000,
+    //         deliveryTime: 45,
+    //         avgRating: "3.5",
+    //       },
+    //     },
+    //   ];
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "restaurant-list",
         children: [
@@ -27638,19 +27639,18 @@ const Body = ()=>{
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                     className: "filter-btn",
                     onClick: ()=>{
-                        // console.log("Button-Clicked");
-                        //FILTER LOGIC HERE::
-                        listOfRest = listOfRest.filter((res)=>res.data.avgRating > 4);
+                        const filteredList = listOfRest.filter((res)=>res.data.avgRating > 4);
+                        setRes(filteredList);
                     },
                     children: "Top Rated Restaurants"
                 }, void 0, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 42,
+                    lineNumber: 45,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 41,
+                lineNumber: 44,
                 columnNumber: 7
             }, undefined),
             listOfRest.map((restaurant)=>{
@@ -27658,17 +27658,18 @@ const Body = ()=>{
                     ...restaurant.data
                 }, restaurant.data.id, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 55,
+                    lineNumber: 59,
                     columnNumber: 16
                 }, undefined);
             })
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 40,
+        lineNumber: 43,
         columnNumber: 5
     }, undefined);
 };
+_s(Body, "k26M/j/SBiHWJqippotBmuaO1DU=");
 _c = Body;
 exports.default = Body;
 var _c;
@@ -27679,7 +27680,7 @@ $RefreshReg$(_c, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./RestaurantCard":"bMboU","../common/mockData":"b20pm"}],"bMboU":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./RestaurantCard":"bMboU","../common/mockData":"b20pm","react":"21dqq"}],"bMboU":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ffb1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
