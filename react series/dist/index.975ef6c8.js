@@ -27600,16 +27600,36 @@ var _mockDataDefault = parcelHelpers.interopDefault(_mockData);
 const Body = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "restaurant-list",
-        children: (0, _mockDataDefault.default).map((restaurant)=>{
-            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
-                ...restaurant.data
-            }, restaurant.data.id, false, {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "filter",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    className: "filter-btn",
+                    onClick: ()=>{
+                        console.log("Button-Clicked");
+                    },
+                    children: "Top Rated Restaurants"
+                }, void 0, false, {
+                    fileName: "src/components/Body.js",
+                    lineNumber: 8,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 8,
-                columnNumber: 16
-            }, undefined);
-        })
-    }, void 0, false, {
+                lineNumber: 7,
+                columnNumber: 7
+            }, undefined),
+            (0, _mockDataDefault.default).map((restaurant)=>{
+                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
+                    ...restaurant.data
+                }, restaurant.data.id, false, {
+                    fileName: "src/components/Body.js",
+                    lineNumber: 19,
+                    columnNumber: 16
+                }, undefined);
+            })
+        ]
+    }, void 0, true, {
         fileName: "src/components/Body.js",
         lineNumber: 6,
         columnNumber: 5
