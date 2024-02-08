@@ -27312,12 +27312,20 @@ const Header = ()=>{
                             " ",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                                 children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                        className: "login",
+                                        children: "Login"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Header.js",
+                                        lineNumber: 11,
+                                        columnNumber: 13
+                                    }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
                                         class: "fa-solid fa-cart-shopping",
                                         children: " "
                                     }, void 0, false, {
                                         fileName: "src/components/Header.js",
-                                        lineNumber: 11,
+                                        lineNumber: 12,
                                         columnNumber: 13
                                     }, undefined),
                                     " "
@@ -27358,12 +27366,12 @@ const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
             alt: "./Food Fire Logo"
         }, void 0, false, {
             fileName: "src/components/Header.js",
-            lineNumber: 20,
+            lineNumber: 21,
             columnNumber: 5
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Header.js",
-        lineNumber: 19,
+        lineNumber: 20,
         columnNumber: 3
     }, undefined);
 _c1 = Title;

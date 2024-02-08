@@ -8,6 +8,7 @@ const Header = () => {
         <ul>
           <li> Home </li> <li> About </li> <li> Contact </li>{" "}
           <li>
+            <button className="login">Login</button>
             <i class="fa-solid fa-cart-shopping"> </i>{" "}
           </li>{" "}
         </ul>{" "}
