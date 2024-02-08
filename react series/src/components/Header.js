@@ -1,6 +1,11 @@
 import FoodFireLogo from "./OIP.jpg";
+import { useState } from "react";
 
 const Header = () => {
+  // let btnName = "Login";
+
+  const [btnNameReact, setBtnNameReact] = useState("Login");
+
   return (
     <div className="header">
       <Title />
@@ -8,7 +13,14 @@ const Header = () => {
         <ul>
           <li> Home </li> <li> About </li> <li> Contact </li>{" "}
           <li>
-            <button className="login">Login</button>
+            <button
+              className="login"
+              onClick={() => {
+                setBtnNameReact("Logout");
+              }}
+            >
+              {btnNameReact}
+            </button>
             <i class="fa-solid fa-cart-shopping"> </i>{" "}
           </li>{" "}
         </ul>{" "}

@@ -27272,13 +27272,18 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _oipJpg = require("./OIP.jpg");
 var _oipJpgDefault = parcelHelpers.interopDefault(_oipJpg);
+var _react = require("react");
+var _s = $RefreshSig$();
 const Header = ()=>{
+    _s();
+    // let btnName = "Login";
+    const [btnNameReact, setBtnNameReact] = (0, _react.useState)("Login");
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "header",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 6,
+                lineNumber: 11,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27290,7 +27295,7 @@ const Header = ()=>{
                                 children: " Home "
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 9,
+                                lineNumber: 14,
                                 columnNumber: 11
                             }, undefined),
                             " ",
@@ -27298,7 +27303,7 @@ const Header = ()=>{
                                 children: " About "
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 9,
+                                lineNumber: 14,
                                 columnNumber: 27
                             }, undefined),
                             " ",
@@ -27306,7 +27311,7 @@ const Header = ()=>{
                                 children: " Contact "
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 9,
+                                lineNumber: 14,
                                 columnNumber: 44
                             }, undefined),
                             " ",
@@ -27314,10 +27319,13 @@ const Header = ()=>{
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                         className: "login",
-                                        children: "Login"
+                                        onClick: ()=>{
+                                            setBtnNameReact("Logout");
+                                        },
+                                        children: btnNameReact
                                     }, void 0, false, {
                                         fileName: "src/components/Header.js",
-                                        lineNumber: 11,
+                                        lineNumber: 16,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
@@ -27325,38 +27333,39 @@ const Header = ()=>{
                                         children: " "
                                     }, void 0, false, {
                                         fileName: "src/components/Header.js",
-                                        lineNumber: 12,
+                                        lineNumber: 24,
                                         columnNumber: 13
                                     }, undefined),
                                     " "
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 10,
+                                lineNumber: 15,
                                 columnNumber: 11
                             }, undefined),
                             " "
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Header.js",
-                        lineNumber: 8,
+                        lineNumber: 13,
                         columnNumber: 9
                     }, undefined),
                     " "
                 ]
             }, void 0, true, {
                 fileName: "src/components/Header.js",
-                lineNumber: 7,
+                lineNumber: 12,
                 columnNumber: 7
             }, undefined),
             " "
         ]
     }, void 0, true, {
         fileName: "src/components/Header.js",
-        lineNumber: 5,
+        lineNumber: 10,
         columnNumber: 5
     }, undefined);
 };
+_s(Header, "fLb9w332fDG6L01gKBulzD5eR8k=");
 _c = Header;
 const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
         href: "/",
@@ -27366,12 +27375,12 @@ const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
             alt: "./Food Fire Logo"
         }, void 0, false, {
             fileName: "src/components/Header.js",
-            lineNumber: 21,
+            lineNumber: 33,
             columnNumber: 5
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Header.js",
-        lineNumber: 20,
+        lineNumber: 32,
         columnNumber: 3
     }, undefined);
 _c1 = Title;
