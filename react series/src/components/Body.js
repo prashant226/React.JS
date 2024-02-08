@@ -1,10 +1,28 @@
 import RestaurantCard from "./RestaurantCard";
-import restaurantList from "../common/mockData";
-import { useState } from "react";
+// import restaurantList from "../common/mockData";
+import { useEffect, useState } from "react";
+import Shimmer from "./shimmer";
 
 const Body = () => {
   //STATE VARIOWERFULL::ABLES WHICH ARE REALLY Powerfull::
-  const [listOfRest, setRes] = useState(restaurantList);
+  const [listOfRest, setListofRest] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const data = await fetch(
+      "https://foodfire.onrender.com/api/restaurants?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING"
+    );
+    const json = await data.json();
+    // OPTIONAL CHAINING
+    setListofRest(json?.data?.cards[2]?.data?.data?.cards);
+  };
+
+  //conditional rendering
+
+  console.log("body rendered");
 
   //NORMAL JS VARIABLE::
   //   let listOfRest = [];
@@ -39,7 +57,9 @@ const Body = () => {
   //     },
   //   ];
 
-  return (
+  return listOfRest.length == 0 ? (
+    <Shimmer />
+  ) : (
     <div className="restaurant-list">
       <div className="filter">
         <button
