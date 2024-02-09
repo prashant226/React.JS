@@ -6,6 +6,7 @@ import Shimmer from "./shimmer";
 const Body = () => {
   //STATE VARIOWERFULL::ABLES WHICH ARE REALLY Powerfull::
   const [listOfRest, setListofRest] = useState([]);
+  const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
     fetchData();
@@ -13,11 +14,12 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://foodfire.onrender.com/api/restaurants?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING"
+      "https://www.swiggy.com/dapi/restaurants/list/update"
     );
     const json = await data.json();
     // OPTIONAL CHAINING
     setListofRest(json?.data?.cards[2]?.data?.data?.cards);
+    setRes(json?.data?.cards[2]?.data?.data?.cards);
   };
 
   //conditional rendering
@@ -62,6 +64,30 @@ const Body = () => {
   ) : (
     <div className="restaurant-list">
       <div className="filter">
+        <div className="search">
+          <input
+            type="text"
+            className="search-box"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          />
+          <button
+            onClick={() => {
+              //filter the restaurant cards and update the UI
+              //search-text
+              console.log(searchText);
+
+              const filteredRestuarant = listOfRest.filter((res) => {
+                res.data.name == searchText;
+              });
+              setListofRest(filteredRestuarant);
+            }}
+          >
+            Search
+          </button>
+        </div>
         <button
           className="filter-btn"
           onClick={() => {

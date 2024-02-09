@@ -27320,7 +27320,7 @@ const Header = ()=>{
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                         className: "login",
                                         onClick: ()=>{
-                                            setBtnNameReact("Logout");
+                                            btnNameReact == "Login" ? setBtnNameReact("Logout") : setBtnNameReact("Login");
                                         },
                                         children: btnNameReact
                                     }, void 0, false, {
@@ -27333,7 +27333,7 @@ const Header = ()=>{
                                         children: " "
                                     }, void 0, false, {
                                         fileName: "src/components/Header.js",
-                                        lineNumber: 24,
+                                        lineNumber: 26,
                                         columnNumber: 13
                                     }, undefined),
                                     " "
@@ -27375,12 +27375,12 @@ const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
             alt: "./Food Fire Logo"
         }, void 0, false, {
             fileName: "src/components/Header.js",
-            lineNumber: 33,
+            lineNumber: 35,
             columnNumber: 5
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Header.js",
-        lineNumber: 32,
+        lineNumber: 34,
         columnNumber: 3
     }, undefined);
 _c1 = Title;
@@ -27621,14 +27621,16 @@ const Body = ()=>{
     _s();
     //STATE VARIOWERFULL::ABLES WHICH ARE REALLY Powerfull::
     const [listOfRest, setListofRest] = (0, _react.useState)([]);
+    const [searchText, setSearchText] = (0, _react.useState)("");
     (0, _react.useEffect)(()=>{
         fetchData();
     }, []);
     const fetchData = async ()=>{
-        const data = await fetch("https://foodfire.onrender.com/api/restaurants?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/update");
         const json = await data.json();
         // OPTIONAL CHAINING
         setListofRest(json?.data?.cards[2]?.data?.data?.cards);
+        setRes(json?.data?.cards[2]?.data?.data?.cards);
     };
     //conditional rendering
     console.log("body rendered");
@@ -27662,28 +27664,67 @@ const Body = ()=>{
     //   ];
     return listOfRest.length == 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 61,
+        lineNumber: 63,
         columnNumber: 5
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "restaurant-list",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "filter",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                    className: "filter-btn",
-                    onClick: ()=>{
-                        const filteredList = listOfRest.filter((res)=>res.data.avgRating > 4);
-                        setRes(filteredList);
-                    },
-                    children: "Top Rated Restaurants"
-                }, void 0, false, {
-                    fileName: "src/components/Body.js",
-                    lineNumber: 65,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "search",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                type: "text",
+                                className: "search-box",
+                                value: searchText,
+                                onChange: (e)=>{
+                                    setSearchText(e.target.value);
+                                }
+                            }, void 0, false, {
+                                fileName: "src/components/Body.js",
+                                lineNumber: 68,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                onClick: ()=>{
+                                    //filter the restaurant cards and update the UI
+                                    //search-text
+                                    console.log(searchText);
+                                    const filteredRestuarant = listOfRest.filter((res)=>{
+                                        res.data.name;
+                                    });
+                                    setListofRest(filteredRestuarant);
+                                },
+                                children: "Search"
+                            }, void 0, false, {
+                                fileName: "src/components/Body.js",
+                                lineNumber: 76,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 67,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "filter-btn",
+                        onClick: ()=>{
+                            const filteredList = listOfRest.filter((res)=>res.data.avgRating > 4);
+                            setRes(filteredList);
+                        },
+                        children: "Top Rated Restaurants"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 91,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 64,
+                lineNumber: 66,
                 columnNumber: 7
             }, undefined),
             listOfRest.map((restaurant)=>{
@@ -27691,18 +27732,18 @@ const Body = ()=>{
                     ...restaurant.data
                 }, restaurant.data.id, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 79,
+                    lineNumber: 105,
                     columnNumber: 16
                 }, undefined);
             })
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 63,
+        lineNumber: 65,
         columnNumber: 5
     }, undefined);
 };
-_s(Body, "IXriKenn9GfxqsnpTRW6Hw0Jwns=");
+_s(Body, "hzxADuyo+VNHiwBQjkwm53WKC6c=");
 _c = Body;
 exports.default = Body;
 var _c;
