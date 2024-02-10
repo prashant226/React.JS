@@ -6,6 +6,7 @@ import ReactDOM from "react-dom/client";
 
 import Header from "./components/Header.js";
 import Body from "./components/Body.js";
+import { createBrowserRouter } from "react-router-dom";
 
 /* My Food App structure will look like this, 
             1) Header
@@ -65,6 +66,12 @@ const AppLayout = () => {
     </React.Fragment>
   );
 };
+const appRouter = createBrowserRouter([
+  { path: "/", element: <AppLayout /> },
+  {
+    path: "/about",
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<AppLayout />);

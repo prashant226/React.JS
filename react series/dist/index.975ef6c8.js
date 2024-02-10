@@ -27278,12 +27278,20 @@ const Header = ()=>{
     _s();
     // let btnName = "Login";
     const [btnNameReact, setBtnNameReact] = (0, _react.useState)("Login");
+    //if no dependency array => useeffect is called on very component render...
+    //if there is an empty dependency array useEffect is called just one , only when componenet is rendered...
+    //if dependency array is {bt}
+    (0, _react.useEffect)(()=>{
+        console.log("useeffect called");
+    }, [
+        btnNameReact
+    ]);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "header",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 11,
+                lineNumber: 18,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27295,7 +27303,7 @@ const Header = ()=>{
                                 children: " Home "
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 14,
+                                lineNumber: 21,
                                 columnNumber: 11
                             }, undefined),
                             " ",
@@ -27303,7 +27311,7 @@ const Header = ()=>{
                                 children: " About "
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 14,
+                                lineNumber: 21,
                                 columnNumber: 27
                             }, undefined),
                             " ",
@@ -27311,7 +27319,7 @@ const Header = ()=>{
                                 children: " Contact "
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 14,
+                                lineNumber: 21,
                                 columnNumber: 44
                             }, undefined),
                             " ",
@@ -27325,7 +27333,7 @@ const Header = ()=>{
                                         children: btnNameReact
                                     }, void 0, false, {
                                         fileName: "src/components/Header.js",
-                                        lineNumber: 16,
+                                        lineNumber: 23,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
@@ -27333,39 +27341,39 @@ const Header = ()=>{
                                         children: " "
                                     }, void 0, false, {
                                         fileName: "src/components/Header.js",
-                                        lineNumber: 26,
+                                        lineNumber: 33,
                                         columnNumber: 13
                                     }, undefined),
                                     " "
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 15,
+                                lineNumber: 22,
                                 columnNumber: 11
                             }, undefined),
                             " "
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Header.js",
-                        lineNumber: 13,
+                        lineNumber: 20,
                         columnNumber: 9
                     }, undefined),
                     " "
                 ]
             }, void 0, true, {
                 fileName: "src/components/Header.js",
-                lineNumber: 12,
+                lineNumber: 19,
                 columnNumber: 7
             }, undefined),
             " "
         ]
     }, void 0, true, {
         fileName: "src/components/Header.js",
-        lineNumber: 10,
+        lineNumber: 17,
         columnNumber: 5
     }, undefined);
 };
-_s(Header, "fLb9w332fDG6L01gKBulzD5eR8k=");
+_s(Header, "qBUFNnZRatZ4wvcPIOqbTGy9X/M=");
 _c = Header;
 const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
         href: "/",
@@ -27375,12 +27383,12 @@ const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
             alt: "./Food Fire Logo"
         }, void 0, false, {
             fileName: "src/components/Header.js",
-            lineNumber: 35,
+            lineNumber: 42,
             columnNumber: 5
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Header.js",
-        lineNumber: 34,
+        lineNumber: 41,
         columnNumber: 3
     }, undefined);
 _c1 = Title;
@@ -27394,7 +27402,7 @@ $RefreshReg$(_c1, "Title");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./OIP.jpg":"hEUbG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hEUbG":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./OIP.jpg":"hEUbG","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hEUbG":[function(require,module,exports) {
 module.exports = require("b368aa63c586bd56").getBundleURL("bLxZJ") + "OIP.15565de6.jpg" + "?" + Date.now();
 
 },{"b368aa63c586bd56":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -27617,10 +27625,12 @@ var _react = require("react");
 var _shimmer = require("./shimmer");
 var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
 var _s = $RefreshSig$();
+// const listOfRest = someFunctionThatMightReturnUndefined() || [];
 const Body = ()=>{
     _s();
     //STATE VARIOWERFULL::ABLES WHICH ARE REALLY Powerfull::
     const [listOfRest, setListofRest] = (0, _react.useState)([]);
+    const [filteredRestuarant, setRes] = (0, _react.useState)([]);
     const [searchText, setSearchText] = (0, _react.useState)("");
     (0, _react.useEffect)(()=>{
         fetchData();
@@ -27664,7 +27674,7 @@ const Body = ()=>{
     //   ];
     return listOfRest.length == 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 63,
+        lineNumber: 65,
         columnNumber: 5
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "restaurant-list",
@@ -27684,7 +27694,7 @@ const Body = ()=>{
                                 }
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 68,
+                                lineNumber: 70,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27700,13 +27710,13 @@ const Body = ()=>{
                                 children: "Search"
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 76,
+                                lineNumber: 78,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 67,
+                        lineNumber: 69,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27718,13 +27728,13 @@ const Body = ()=>{
                         children: "Top Rated Restaurants"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 91,
+                        lineNumber: 93,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 66,
+                lineNumber: 68,
                 columnNumber: 7
             }, undefined),
             listOfRest.map((restaurant)=>{
@@ -27732,18 +27742,18 @@ const Body = ()=>{
                     ...restaurant.data
                 }, restaurant.data.id, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 105,
+                    lineNumber: 107,
                     columnNumber: 16
                 }, undefined);
             })
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 65,
+        lineNumber: 67,
         columnNumber: 5
     }, undefined);
 };
-_s(Body, "hzxADuyo+VNHiwBQjkwm53WKC6c=");
+_s(Body, "kKMY8JSwPUd0ZhV36C785CDS7RI=");
 _c = Body;
 exports.default = Body;
 var _c;

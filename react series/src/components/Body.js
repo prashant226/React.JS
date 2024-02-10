@@ -2,10 +2,12 @@ import RestaurantCard from "./RestaurantCard";
 // import restaurantList from "../common/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./shimmer";
+// const listOfRest = someFunctionThatMightReturnUndefined() || [];
 
 const Body = () => {
   //STATE VARIOWERFULL::ABLES WHICH ARE REALLY Powerfull::
   const [listOfRest, setListofRest] = useState([]);
+  const [filteredRestuarant, setRes] = useState([]);
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
